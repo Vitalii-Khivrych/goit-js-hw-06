@@ -24,5 +24,5 @@ listRef.style.listStyle = 'none';
 listRef.style.display = 'grid';
 listRef.style.justifyItems = 'center';
 
-const itemRef = listRef.querySelectorAll('li');
+const itemRef = listRef.querySelectorAll('.gallery > li');
 itemRef.forEach(item => (item.style.marginBottom = '10px'));

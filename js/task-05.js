@@ -1,14 +1,10 @@
-const ref = {
-  input: document.querySelector('#name-input'),
-  userName: document.querySelector('#name-output'),
-};
+const inputNameRef = document.querySelector('#name-input');
+const outputNameRef = document.querySelector('#name-output');
 
-const onСhangeTrackingInput = ({ currentTarget }) =>
-  currentTarget.value === ''
-    ? (ref.userName.textContent = 'Anonymous')
-    : (ref.userName.textContent = currentTarget.value);
+const onСhangeTrackingInput = ({ currentTarget: { value } }) =>
+  value === '' ? (outputNameRef.textContent = 'Anonymous') : (outputNameRef.textContent = value);
 
-ref.input.addEventListener('input', onСhangeTrackingInput);
+inputNameRef.addEventListener('input', onСhangeTrackingInput);
 
 // ref.input.addEventListener('input', onСhangeTrackingInput);
 

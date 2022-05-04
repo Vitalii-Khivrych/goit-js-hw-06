@@ -28,6 +28,7 @@ function createBoxes(amount) {
     arrayDiv.push(elementDiv);
   }
   boxesRef.append(...arrayDiv);
+  inputRef.value = 1;
 }
 
 function destroyBoxes() {
