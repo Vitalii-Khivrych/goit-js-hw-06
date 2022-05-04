@@ -12,3 +12,17 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const createImage = images =>
+  images.map(({ url, alt }) => `<li><img src=${url} alt='${alt}' width=320></li>`).join(' ');
+
+const listRef = document.querySelector('.gallery');
+const getImageGallary = listRef.insertAdjacentHTML('afterbegin', createImage(images));
+
+console.log(listRef);
+listRef.style.listStyle = 'none';
+listRef.style.display = 'grid';
+listRef.style.justifyItems = 'center';
+
+const itemRef = listRef.querySelectorAll('li');
+itemRef.forEach(item => (item.style.marginBottom = '10px'));
