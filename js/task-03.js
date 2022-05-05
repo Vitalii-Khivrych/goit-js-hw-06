@@ -17,7 +17,7 @@ const createImage = images =>
   images.map(({ url, alt }) => `<li><img src=${url} alt='${alt}' width=320></li>`).join(' ');
 
 const listRef = document.querySelector('.gallery');
-const getImageGallary = listRef.insertAdjacentHTML('afterbegin', createImage(images));
+listRef.insertAdjacentHTML('afterbegin', createImage(images));
 
 console.log(listRef);
 listRef.style.listStyle = 'none';
